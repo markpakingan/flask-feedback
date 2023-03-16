@@ -1,0 +1,24 @@
+{% extends "base.html" %} 
+
+{% block content%}
+
+    <h1>Welcome Back {{user.username}}</h1>
+
+     
+    <ul>
+        <li><b>Username:</b> {{ user.username }}</li>
+        <li><b>Email:</b> {{ user.email }}</li>
+        <li><b>First Name:</b> {{ user.first_name }}</li>
+        <li><b>Last Name:</b> {{ user.last_name }}</li>
+    </ul>
+    
+    
+    <!-- <a href="">Edit Feedback</a>
+    <a href="">Delete</a> -->
+
+    <p>
+        <a href="/users/{{ user.username }}/feedback/add" class="btn btn-primary">
+          Add feedback
+        </a>
+      </p>
+{% endblock%}
